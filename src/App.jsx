@@ -4,6 +4,7 @@ import { ThemeProvider } from './components/ui/theme-provider.jsx'
 import './App.css'
 import AppLayout from './Layout/App-layout.jsx'
 import JobPage from './pages/job-page.jsx'
+import Postjob from './pages/Postjob.jsx'
 import JobListing from './pages/JobListing'
 import LandingPage from './pages/landing.jsx'
 import Onboarding from './pages/Onboarding'
@@ -26,8 +27,12 @@ const router = createBrowserRouter([{
 
     
   },
+  {
+    path:'/post-job',
+    element:<Postjob/>
+  },
 {
-      path:'/Job/:id',
+      path:'/Job',
       element:<Job/>
 
     
@@ -37,7 +42,7 @@ const router = createBrowserRouter([{
     element:<JobListing/>
 
   
-}]
+},]
 }])
 
 function App() {
