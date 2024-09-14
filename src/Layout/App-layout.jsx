@@ -3,7 +3,8 @@ import { Outlet } from 'react-router-dom'
 
 const AppLayout = () => {
   return (
-    <div>AppLayout
+    <div>
+    <div className='grid-background'></div>
     <Outlet/>
     </div>
   )
