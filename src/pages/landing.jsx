@@ -25,7 +25,7 @@ const LandingPage = () => {
         <Button variant='destructive' size='xl'> Post Job </Button>
         </Link>
       </div>
-      <Carousel  plugins={[Autoplay({delay:2000})]}
+      <Carousel  plugins={[Autoplay({delay:1900})]}
       opts={{
         align: "start",
       }}
