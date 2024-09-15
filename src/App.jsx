@@ -7,8 +7,11 @@ import JobPage from './pages/job-page.jsx'
 import Postjob from './pages/Postjob.jsx'
 import JobListing from './pages/JobListing'
 import LandingPage from './pages/landing.jsx'
+import ProtectedRoutes from './components/ProtectedRoutes.jsx'
 import Onboarding from './pages/Onboarding'
 import Job from './pages/Job'
+import MyJobs from './pages/MyJobs.jsx'
+import SaveJobs from './pages/SaveJobs.jsx'
 const router = createBrowserRouter([{
   element:<AppLayout/>,
   children:[{
@@ -19,27 +22,59 @@ const router = createBrowserRouter([{
       
       {
         path:'/onboarding'
-        ,element:<Onboarding/>
+        ,element:
+          <ProtectedRoutes>
+        <Onboarding/>
+
+          </ProtectedRoutes>
       },
 {
       path:'/JobPage',
-      element:<JobPage/>
+      element:
+        <ProtectedRoutes>
+      <JobPage/>
+      </ProtectedRoutes>
 
     
   },
   {
     path:'/post-job',
-    element:<Postjob/>
+    element:
+      <ProtectedRoutes>
+        <Postjob/>
+      </ProtectedRoutes>
+    
+  },
+  {
+    path:'/saved-job',
+    element:
+    <ProtectedRoutes> <SaveJobs/></ProtectedRoutes>
+
+   
   },
 {
-      path:'/Job',
-      element:<Job/>
+      path:'/my-Job',
+      element:
+        <ProtectedRoutes>
+      <MyJobs/>
+
+        </ProtectedRoutes>
 
     
   },
   {
     path:'/Job-Listing',
-    element:<JobListing/>
+    element:
+      <ProtectedRoutes>
+    <JobListing/></ProtectedRoutes>
+
+  
+},
+  {
+    path:'/job',
+    element:
+      <ProtectedRoutes>
+    <JobListing/></ProtectedRoutes>
 
   
 },]
