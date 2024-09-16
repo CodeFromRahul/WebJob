@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-// import { Button } from './ui/button'
 import { SignedIn,SignInButton,SignedOut,UserButton, SignIn } from '@clerk/clerk-react'
 import { Button } from './ui/button'
 import { BriefcaseBusinessIcon, Heart, HeartCrack, PenBox } from 'lucide-react'
-import { hrtime } from 'process'
 
 const Header = () => {
   const [showSignIn,setSignIn ]=useState(false)

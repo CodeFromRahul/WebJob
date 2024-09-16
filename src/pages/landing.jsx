@@ -61,7 +61,7 @@ const LandingPage = () => {
     
     </Carousel>
 
-<div className='min-w-96 flex  m-20 h-90 justify-center align-center '>
+<div className='min-w-96 flex  m-20 h-90 justify-center items-center '>
       <img src='/banner.jpeg' className='w-full  '/>
 </div>
 <section className='grid grid-cols-1 md:grid-cols-2 m-5 gap-4'>

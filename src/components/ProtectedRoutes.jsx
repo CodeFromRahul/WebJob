@@ -10,7 +10,8 @@ const ProtectedRoutes = ({children}) => {
         return <Navigate to="/?sign-in=true"/>
     }
 
-
+    // Checking onBoarding Status
+    
 
   return children
 }

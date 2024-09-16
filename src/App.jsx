@@ -9,7 +9,6 @@ import JobListing from './pages/JobListing'
 import LandingPage from './pages/landing.jsx'
 import ProtectedRoutes from './components/ProtectedRoutes.jsx'
 import Onboarding from './pages/Onboarding'
-import Job from './pages/Job'
 import MyJobs from './pages/MyJobs.jsx'
 import SaveJobs from './pages/SaveJobs.jsx'
 const router = createBrowserRouter([{
