@@ -1,7 +1,7 @@
 import { useUser } from '@clerk/clerk-react'
 import {BarLoader} from "react-spinners"
 import { Button } from '@/components/ui/button'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Onboarding = () => {
@@ -19,6 +19,13 @@ const Onboarding = () => {
     })
     
   }
+
+  useEffect(()=>{
+    if(user?.unsafeMetadata?.role){
+      navigate(user?.unsafeMetadata?.role ==="Recruiter"?"/post-job":"/job")
+
+    }
+  },[user])
 
   if(!isLoaded){
     return <BarLoader className="mb-4" width={"100%"} color="#36d7b7" />

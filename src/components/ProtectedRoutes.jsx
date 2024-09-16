@@ -1,4 +1,5 @@
 import { useUser } from '@clerk/clerk-react'
+import path from 'path'
 import React from 'react'
 import { Navigate, useLocation } from 'react-router-dom'
 
@@ -11,6 +12,9 @@ const ProtectedRoutes = ({children}) => {
     }
 
     // Checking onBoarding Status
+
+    if(user!==undefined && !user.unsafeMetadata.role && !path=="/onboarding")
+      return <Navigate to="/onboarding" />
     
 
   return children
